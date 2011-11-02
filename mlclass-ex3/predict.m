@@ -20,14 +20,19 @@ p = zeros(size(X, 1), 1);
 %       information see 'help max'. If your examples are in rows, then, you
 %       can use max(A, [], 2) to obtain the max for each row.
 %
+temp=Theta1(:,2:end);
+temp1=Theta2(:,2:end);
 
+z2=X*temp';
+a2=sigmoid(z2);
+z3=a2*temp1';
+a3=sigmoid(z3);
 
-
-
-
-
-
-
+#for i = 1:num_labels
+[pred, p] =max(a3, [], 2);
+#end
+pred
+p
 
 % =========================================================================
 

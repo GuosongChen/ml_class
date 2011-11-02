@@ -25,12 +25,12 @@ X = [ones(m, 1) X];
 %       are in rows, then, you can use max(A, [], 2) to obtain the max 
 %       for each row.
 %       
+%for i = 1:m
 
-
-
-
-
-
+%A = sigmoid(X(m)*all_theta);
+% max(A, [], 2)
+%end
+[pred, p] =max(sigmoid(X*all_theta'), [], 2);
 
 % =========================================================================
 
